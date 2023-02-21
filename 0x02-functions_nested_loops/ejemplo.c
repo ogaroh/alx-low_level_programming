@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _putchar - writes the character c to stdout
@@ -11,7 +11,7 @@
 
 int main(void)
 {
-        char word[9] = "Holberton";
+        char word[8] = "_putchar";
         int i;
 
 	for (i = 0; i < 9; i++)

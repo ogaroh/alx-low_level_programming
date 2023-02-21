@@ -1,7 +1,7 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * jack_bauer - Check Holberton
+ * jack_bauer - check code
  * Description: function prints every minute in one day
  * Return: Nothing
  */
