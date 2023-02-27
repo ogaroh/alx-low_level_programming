@@ -9,15 +9,15 @@
  * Return: pointer to dest
  */
 
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char *destination, char *source)
 {
 	int i;
 
-	for (i = 0; src[i] != '\0'; i++)
+	for (i = 0; source[i] != '\0'; i++)
 	{
-		dest[i] = src[i];
+		destination[i] = source[i];
 	}
-	dest[i] = '\0';
+	destination[i] = '\0';
 
-	return (dest);
+	return (destination);
 }
