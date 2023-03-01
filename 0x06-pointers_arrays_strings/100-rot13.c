@@ -1,52 +1,34 @@
 #include "main.h"
-
 /**
- * base10 - power in 10 base
- * @n: an exponent
- * Return: returns 10 to power exponent
+ *rot13 - encodes strings using rot13.
+ *@s: pointer to string.
+ *
+ *Return: pointer to encoded string.
  */
-int base10(int n)
+char *rot13(char *s)
 {
-	int base = 10;
+	int stringCount, rotation;
+	char r1[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+				 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+				 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+				 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+				 'Z'};
+	char r2[] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+				 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+				 'm', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+				 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+				 'M'};
 
-	while (n > 0)
+	for (stringCount = 0; s[stringCount] != '\0'; stringCount++)
 	{
-		base *= 10;
-		n--;
-	}
-	return (base);
-}
-
-/**
- * print_number - prints integers enters as parameters using putchar
- * @n: integer to print
- * Return: void
- */
-void print_number(int n)
-{
-	int power;
-
-	power = base10(8);
-
-	if (n < 0)
-	{
-		_putchar('-');
-		n *= -1;
-	}
-
-	if (n == 0)
-		_putchar('0');
-
-	else
-	{
-		while (n / power == 0)
-			power /= 10;
-
-		while (power >= 1)
+		for (rotation = 0; rotation < 53; rotation++)
 		{
-			_putchar((n / power) + '0');
-			n %= power;
-			power /= 10;
+			if (r1[rotation] == s[stringCount])
+			{
+				s[stringCount] = r2[rotation];
+				break;
+			}
 		}
 	}
+	return (s);
 }
