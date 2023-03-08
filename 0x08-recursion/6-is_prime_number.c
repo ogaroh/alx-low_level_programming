@@ -6,6 +6,7 @@ int is_divisible(int num, int div);
  * @n: an input integer
  * Return: 1 if n is prime or  0 in otherwise
  */
+
 int is_prime_number(int n)
 {
 	int div = 2;
@@ -25,6 +26,7 @@ int is_prime_number(int n)
  * @div: the result of division
  * Return: 1 if num is divisible or 0 if numis not divisible
  */
+
 int is_divisible(int num, int div)
 {
 	if (num % div == 0)
