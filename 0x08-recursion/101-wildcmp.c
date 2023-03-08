@@ -1,11 +1,12 @@
 #include "main.h"
-/**
- * wildcmp - A function that compares two strings
- * @s1: First input string
- * @s2: Second input string
- * Return: 1 if strings identical and 0 in otherwise
- */
 
+/**
+ * find_other - A function that finds the presence of a character in a string
+ * @c: input character
+ * @str: input string
+ * @counter: counter
+ * Return: 1 if the character is present
+ */
 int find_other(char s, char *str, int *counter)
 {
 	if (s == *str)
@@ -21,6 +22,12 @@ int find_other(char s, char *str, int *counter)
 	}
 }
 
+/**
+ * wildcmp - A function that compares two strings
+ * @s1: First input string
+ * @s2: Second input string
+ * Return: 1 if strings identical and 0 in otherwise
+ */
 int wildcmp(char *s1, char *s2)
 {
 	int counter;
