@@ -2,7 +2,7 @@
 
 /**
  * find_other - A function that finds the presence of a character in a string
- * @c: input character
+ * @s: input character
  * @str: input string
  * @counter: counter
  * Return: 1 if the character is present
