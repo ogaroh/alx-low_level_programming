@@ -17,20 +17,20 @@ void print_grid(int **grid, int width, int height)
 
   h = 0;
   while (h < height)
+  {
+    w = 0;
+    while (w < width)
     {
-      w = 0;
-      while (w < width)
-        {
-	  printf("%d ", grid[h][w]);
-	  w++;
-        }
-      printf("\n");
-      h++;
-    }   
+      printf("%d ", grid[h][w]);
+      w++;
+    }
+    printf("\n");
+    h++;
+  }
 }
 
 /**
- * main - check the code.
+ * main - check the code for ALX School students.
  *
  * Return: Always 0.
  */
@@ -40,9 +40,9 @@ int main(void)
 
   grid = alloc_grid(6, 4);
   if (grid == NULL)
-    {
-      return (1);
-    }
+  {
+    return (1);
+  }
   print_grid(grid, 6, 4);
   printf("\n");
   grid[0][3] = 98;
